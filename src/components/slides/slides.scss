@@ -1,0 +1,11 @@
+.slides {
+  position: relative;
+  overflow: hidden;
+  width: 200px;
+}
+.wrapperSlides {
+  position: relative;
+  left: 0;
+  display: flex;
+  transition: all 0.5s ease;
+}
