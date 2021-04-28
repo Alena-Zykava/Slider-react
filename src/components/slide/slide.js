@@ -1,5 +1,5 @@
 import React from 'react';
-import { string, bool } from 'prop-types';
+import { string } from 'prop-types';
 import './slide.scss';
 
 const Slide = ({ title, image }) => {
@@ -16,7 +16,6 @@ const Slide = ({ title, image }) => {
 
 Slide.propTypes = {
     title: string,
-    image: string,
-    isVisibly: bool
+    image: string
 }
 export default Slide;
