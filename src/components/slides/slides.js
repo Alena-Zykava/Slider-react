@@ -1,11 +1,11 @@
 import React from 'react';
-import { number } from 'prop-types';
+import { number, func } from 'prop-types';
 
 import {dataSlides} from '../../constants';
 import Slide from '../slide/slide';
 import './slides.scss';
 
-const Slides = ({left}) => {
+const Slides = ({left, onMouseDown, onMouseUp, onTouchEnd, onTouchStart}) => {
     
   const slidesItems = dataSlides.map((el) => {
       return <Slide
@@ -16,7 +16,12 @@ const Slides = ({left}) => {
   });
         
   return (
-      <div className='slides'>
+      <div className='slides'
+          onMouseDown={onMouseDown}
+          onMouseUp={onMouseUp}
+          onTouchEnd={onTouchEnd}
+          onTouchStart={onTouchStart}
+        >
           <div className='wrapperSlides' style={{left: left}}>
              {slidesItems} 
           </div>      
@@ -25,7 +30,11 @@ const Slides = ({left}) => {
 };
 
 Slides.propTypes = {
-    left: number
+    left: number,
+    onMouseDown: func,
+    onMouseUp: func,
+    onTouchEnd: func,
+    onTouchStart: func
 };
 
 export default Slides;

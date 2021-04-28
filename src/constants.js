@@ -17,4 +17,9 @@ const dataSlides = [
     image: bridge,
   },
 ];
-export {dataSlides};
+
+const WIDTH_SLIDER = 200;
+
+const MAX_SHIFT_SLIDE = 0 - (dataSlides.length - 1) * WIDTH_SLIDER;
+
+export {dataSlides, WIDTH_SLIDER, MAX_SHIFT_SLIDE};
